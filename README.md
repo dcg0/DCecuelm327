@@ -28,4 +28,6 @@ chmod +x gradlew
 
 Descarga la última versión compilada aquí:
 
-**[⬇️ Última versión (APK)](https://github.com/dcg0/DCecuelm327/releases/latest)**
+## 📥 Descargar APK
+
+[⬇️ Descargar APK](https://github.com/dcg0/DCecuelm327/releases/download/build-1/androbd-debug.apk)
