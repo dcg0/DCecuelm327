@@ -23,5 +23,8 @@ chmod +x gradlew
 
 ## Autor DC-LABORATORY
 Descarga la última versión compilada aquí:
+
 ## 📥 Descargar APK
-[⬇️ Descargar APK](https://github.com/dcg0/DCecuelm327/releases/download/build-1/androbd-debug.apk)
+[⬇️ Descargar 
+
+APK](https://github.com/dcg0/DCecuelm327/releases/download/build-1/androbd-debug.apk)
