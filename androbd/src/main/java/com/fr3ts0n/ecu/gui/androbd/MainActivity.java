@@ -948,15 +948,13 @@ public class MainActivity extends PluginManager
      * Compatible with Android 4.1+ using standard menu handling.
      */
     @Override
-    public 
-    @Override
-    public boolean onOptionsItemSelected(android.view.MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         if (item.getItemId() == getResources().getIdentifier("action_dashboard", "id", getPackageName())) {
             startActivity(new android.content.Intent(this, org.cz.android.androbd.ui.DashboardActivity.class));
             return true;
         }
-            MenuItem item)
-    {
+
         int id = item.getItemId();
         {
             // Display and UI Management
