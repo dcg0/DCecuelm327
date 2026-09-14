@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>DC-ELM327 Dashboard</title>
+<style>
+  :root {
+    --color-primary: #FD8950;
+    --color-primary-dark: #B94E23;
+    --color-accent: #FDFC71;
+    --bg: #0A1118;
+    --card-bg: #131E2B;
+    --text-primary: #FFFFFF;
+    --text-secondary: #BFECE9;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: linear-gradient(180deg, var(--card-bg) 0%, var(--bg) 100%);
+    border-bottom: 2px solid var(--color-primary);
+  }
+  header img {
+    width: 44px; height: 44px; border-radius: 50%;
+    box-shadow: 0 0 8px rgba(253,137,80,0.6);
+  }
+  header h1 {
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  #status {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  #status .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #555;
+  }
+  #status.connected .dot { background: #4CD964; box-shadow: 0 0 6px #4CD964; }
+
+  main {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  .gauge {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 14px;
+    border: 1px solid rgba(253,137,80,0.25);
+    text-align: center;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .gauge.updated {
+    box-shadow: 0 0 14px rgba(253,137,80,0.55);
+    transform: scale(1.02);
+  }
+  .gauge .value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+  .gauge .label {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  #empty-hint {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 40px 10px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="DC-ELM327">
+    <h1>DC-ELM327</h1>
+    <div id="status"><span class="dot"></span><span id="status-text">Sin datos</span></div>
+  </header>
+
+  <main id="gauges">
+    <div id="empty-hint">Esperando datos del ELM327&hellip;<br>Conecta el adaptador desde el menú principal.</div>
+  </main>
+
+<script>
+  // Mapa pid -> elemento DOM, para no recrear tarjetas en cada actualización
+  const gaugeEls = {};
+  const statusEl = document.getElementById('status');
+  const statusText = document.getElementById('status-text');
+  const gaugesContainer = document.getElementById('gauges');
+  const emptyHint = document.getElementById('empty-hint');
+
+  function ensureGauge(pid) {
+    if (gaugeEls[pid]) return gaugeEls[pid];
+    if (emptyHint) emptyHint.remove();
+
+    const card = document.createElement('div');
+    card.className = 'gauge';
+    card.innerHTML = `
+      <div class="value" id="val-${pid}">--</div>
+      <div class="label">${pid}</div>
+    `;
+    gaugesContainer.appendChild(card);
+    gaugeEls[pid] = card;
+    return card;
+  }
+
+  // Llamada por DashboardActivity.java vía evaluateJavascript cada vez que llega un dato OBD
+  window.updateOBDData = function(pid, value) {
+    const card = ensureGauge(pid);
+    const valueEl = card.querySelector('.value');
+    valueEl.textContent = value;
+
+    card.classList.add('updated');
+    clearTimeout(card._timeout);
+    card._timeout = setTimeout(() => card.classList.remove('updated'), 400);
+
+    statusEl.classList.add('connected');
+    statusText.textContent = 'Conectado';
+  };
+</script>
+</body>
+</html>

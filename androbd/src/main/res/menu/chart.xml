@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        Chart activity menu for data export and sharing features
+        Compatible with Android 4.1+ using standard menu components
+    -->
+    <item
+        android:id="@+id/snapshot"
+        android:title="@string/snapshot"
+        android:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_camera"/>
+    <item
+        android:id="@+id/share"
+        android:title="@string/share"
+        android:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_share"/>
+
+    <item
+        android:id="@+id/action_dashboard"
+        android:title="Tablero DC"
+        android:icon="@drawable/ic_dc_elm327_tool"
+        android:showAsAction="always" />
+
+</menu>

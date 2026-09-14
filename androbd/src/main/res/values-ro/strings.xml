@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="translation_credits">Tradus de Cristian</string>
+    <string name="app_description">Aplicație de diagnosticare a vehiculelor Android OBD pentru adaptorul ELM327 Bluetooth</string>
+    <string name="title_connecting">Conectare…</string>
+    <string name="title_connected_to">Conectat la %s</string>
+    <string name="logo">Logo</string>
+    <string name="back_again_to_exit">Apasa inapoi inca o data pentru a inchide aplicatia</string>
+    <string name="action_connect">Conectare</string>
+    <string name="obd_none">Fara serviciu</string>
+    <string name="obd_services">Serviciu OBD</string>
+    <string name="obd_veh_info">Informatii vehicul OBD</string>
+    <string name="obd_data">Date OBD</string>
+    <string name="obd_codes">Coduri de eroare OBD</string>
+    <string name="obd_permanentcodes">Coduri de eroare OBD (permanente)</string>
+    <string name="obd_clear_info">"Aceasta va reseta MIL și va șterge toate diagnosticele legate de emisii\n\n  informații, inclusiv:\n\n  - Coduri de diagnosticare a problemelor\n\n  - Înghețați datele cadrului\n\n  - Date de testare a senzorului de oxigen\n\n  - Starea testelor de monitorizare a sistemului\n\n  - Rezultatele testelor de monitorizare la bord\n\n  - Distanța parcursă în timpul activării MIL\n\n  - Numărul de încălziri de la eliminarea DTC-urilor\n\n  - Distanța parcursă de la eliminarea DTC-urilor\n\n  - Durata de funcționare a motorului în timp ce MIL este activat\n\n  - Timp de la eliminarea DTC-urilor\n\n\n\n  Pot apărea alte acțiuni de compensare / resetare specifice producătorului.\n\n  Pierderea datelor poate face ca vehiculul să funcționeze prost pentru o scurtă perioadă de timp\n\n  perioadă de timp în timp ce ECU se recalibrează."</string>
+</resources>

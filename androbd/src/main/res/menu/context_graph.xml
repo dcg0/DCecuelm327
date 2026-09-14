@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Context menu for data visualization options
+    Provides quick access to different data presentation modes:
+    - Chart view for graphical data analysis
+    - Dashboard for real-time monitoring
+    - HUD (Head-Up Display) for minimal distraction viewing
+    - Filter for data selection
+    
+    Compatible with Android 4.1+ using standard menu components
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/chart_selected"
+        android:icon="@drawable/ic_chart"
+        android:showAsAction="always"
+        android:title="@string/chart"/>
+    <item
+        android:id="@+id/dashboard_selected"
+        android:icon="@drawable/ic_speedometer"
+        android:showAsAction="always"
+        android:title="@string/dashboard"/>
+    <item
+        android:id="@+id/hud_selected"
+        android:icon="@drawable/ic_headup"
+        android:showAsAction="always"
+        android:title="@string/hud"/>
+    <item
+        android:id="@+id/filter_selected"
+        android:icon="@drawable/ic_filter"
+        android:showAsAction="always"
+        android:title="@string/filter"/>
+</menu>
