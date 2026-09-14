@@ -9,23 +9,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
 
-    - name: Make gradlew executable
-      run: chmod +x gradlew
+      - name: Make gradlew executable
+        run: chmod +x gradlew
 
-    - name: Build Debug APK
-      run: ./gradlew assembleDebug
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
 
-    - name: Upload APK Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: DC-ELM327-APK
-        path: androbd/build/outputs/apk/debug/androbd-debug.apk
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DC-ELM327-APK
+          path: androbd/build/outputs/apk/debug/androbd-debug.apk
+
+      - name: Create GitHub Release with APK
+        uses: ncipollo/release-action@v1
+        with:
+          tag: "build-${{ github.run_number }}"
+          name: "DC-ELM327 build #${{ github.run_number }}"
+          artifacts: "androbd/build/outputs/apk/debug/androbd-debug.apk"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
