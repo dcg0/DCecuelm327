@@ -4,12 +4,10 @@
 
 **DC-ELM327** is a customized DC-ELM327OBD-II diagnostic application based on DC-ELM327.  
 Connect your Android device to your car’s on-board diagnostics system via any ELM327 compatible adapter, display live data, read/clear fault codes and more.
-
-It is open source and completely free. The application also has a built-in Demo mode that simulates live data, so you don't require an adapter to test it.
-
+It is open source and complete
 ## Features  DC-ELM327 
 
-- Bluetooth / USB / Wi-Fi connection
+- Bluetooth/USB/Wi-Fi  _-connection
 - Read & Clear fault codes
 - Live data + charts
 - Dashboard
@@ -24,10 +22,6 @@ chmod +x gradlew
 ./gradlew clean assembleDebug
 
 ## Autor DC-LABORATORY
-## 📥 Descargar APK
-
 Descarga la última versión compilada aquí:
-
 ## 📥 Descargar APK
-
 [⬇️ Descargar APK](https://github.com/dcg0/DCecuelm327/releases/download/build-1/androbd-debug.apk)
