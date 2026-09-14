@@ -22,9 +22,9 @@ It is open source and complete.
 
 ## Build APK
 
-```bash
-chmod +x gradlew
-./gradlew clean assembleDebug
+    chmod +x gradlew
+    ./gradlew clean assembleDebug
+
 ## Autor DC-LABORATORY
 
 Descarga la última versión compilada aquí:
