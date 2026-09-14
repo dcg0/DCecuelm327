@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     namespace = 'com.fr3ts0n.ecu.gui.androbd'
-    compileSdk 36
+    compileSdk 37
 
     buildFeatures {
         resValues = true
@@ -10,7 +10,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 17
+        minSdkVersion 23
         targetSdkVersion 36
         versionCode 20710
         versionName 'V2.7.10'
@@ -36,6 +36,9 @@ android {
 
 dependencies {
     implementation project(':library')
+    implementation project(':plugin')
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.github.mik3y:usb-serial-for-android:3.9.0'
     implementation 'com.github.anastr:speedviewlib:1.6.1'

@@ -9,7 +9,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import org.cz.android.androbd.R;
+import com.fr3ts0n.ecu.gui.androbd.R;
 
 public class DashboardActivity extends AppCompatActivity {
 
