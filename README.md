@@ -24,3 +24,8 @@ chmod +x gradlew
 ./gradlew clean assembleDebug
 
 ## Autor DC-LABORATORY 
+## 📥 Descargar APK
+
+Descarga la última versión compilada aquí:
+
+**[⬇️ Última versión (APK)](https://github.com/dcg0/DCecuelm327/releases/latest)**
