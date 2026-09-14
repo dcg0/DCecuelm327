@@ -23,7 +23,7 @@ It is open source and completely free. The application also has a built-in Demo 
 chmod +x gradlew
 ./gradlew clean assembleDebug
 
-## Autor DC-LABORATORY 
+## Autor DC-LABORATORY
 ## 📥 Descargar APK
 
 Descarga la última versión compilada aquí:
