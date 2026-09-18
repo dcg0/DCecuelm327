@@ -7,7 +7,7 @@ https://github.com/dcg0/DC-elm327HC/releases/tag/v0.1.0
 
 # DC-ELM327
 
-**DC-ELM327** is a customized OBD-II diagnostic application based on AndrOBD.
+**DC-ELM327** is a customized OBD-II diagnostic application based DC-ELM327.
 Connect your Android device to your car's on-board diagnostics system via any ELM327 compatible adapter, display live data, read/clear fault codes, and more.
 It is open source and complete.
 
