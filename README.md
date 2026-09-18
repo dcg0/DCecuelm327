@@ -3,6 +3,8 @@ https://github.com/dcg0/DC-elm327HC/releases/tag/v0.1.0
 
 ![HC-ELM327 / DC-ELM327](logo/web_hi_res_1280x800.png)
 
+Descargar APK
+La versión de prueba más reciente está disponible en GitHub Releases. También puedes descargar directamente la APK debug desde DC-ELM327-debug.apk.
 ![HC-ELM327 / DC-ELM327](https://private-us-east-1.manuscdn.com/sessionFile/MjbV3PgqJGQaw95CFA5nFV/sandbox/iBRjGetfij70lP3CYlTWvS-images_1789763040203_na1fn_L2hvbWUvdWJ1bnR1L3dvcmtfZGNfZWxtMzI3L0RDLUVMTTMyNy9sb2dvL3dlYl9oaV9yZXNfMTI4MHg4MDA.png?Expires=1789935842&Signature=MEQCIHfywRnSsR9tRQnmqY1N4qLSgfwh~ApjHHY0ymOT20Q4AiAhwAgavXVSGZsqMHgp08wbCwKWdH8zPLs1~JsA-bafRA__&Key-Pair-Id=K1K5N5YNBUUMMN)
 
 # DC-ELM327
