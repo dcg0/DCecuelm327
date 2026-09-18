@@ -28,4 +28,4 @@ It is open source and complete.
 
 Descarga la última versión compilada aquí:
 
-**[⬇️ Última versión (APK)](https://github.com/dcg0/DCecuelm327/releases/download/build-1/androbd-debug.apk)**
+https://github.com/dcg0/DC-elm327HC/releases/tag/v0.1.0
